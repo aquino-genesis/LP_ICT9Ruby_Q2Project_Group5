@@ -81,9 +81,9 @@
                 <br>
 
                 <p>
-                    Phone: <span class="text-primary">+63 2 8722 9720 to 26</span><br>
-                    Email: <span class="text-primary">@obmontessori.edu.ph</span><br>
-                    Address: <span class="text-primary">3 Eisenhower St., Bgy. Greenhills, San Juan City, Metro Manila, Philippines</span>
+                    <strong>Phone:</strong><span class="text-primary">+63 2 8722 9720 to 26</span><br>
+                    <strong>Email:</strong><span class="text-primary">@obmontessori.edu.ph</span><br>
+                    <strong>Address:</strong><span class="text-primary">3 Eisenhower St., Bgy. Greenhills, San Juan City, Metro Manila, Philippines</span>
                 </p>
                 <br>
 
@@ -99,21 +99,28 @@
                 <form class="container-fluid form-group">
                     <h5 class="text-left fw-bold mb-4">Contact Information</h5>
 
-                    <!-- EMAIL INPUT -->
-                    <label for="email" class="form-label">Email</label>
+                    <!-- NAME INPUT -->
+                    <label for="email" class="form-label"><strong>Full Name:</strong></label>
                     <div class="input-group mb-4">
-                        <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
+                        <input required type="text" name="fname" id="fname" class="form-control" placeholder="First Name">
+                        <input required type="text" name="lname" id="lname" class="form-control" placeholder="Last Name">
+                    </div>
+                    
+                    <!-- EMAIL INPUT -->
+                    <label for="email" class="form-label"><strong>Email:</strong></label>
+                    <div class="input-group mb-4">
+                        <input required type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
                     </div>
 
                     <!-- NUMBER INPUT -->
-                    <label for="phone" class="form-label">Phone Number</label>
+                    <label for="phone" class="form-label"><strong>Phone Number:</strong></label>
                     <div class="input-group mb-4">
-                        <input type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
+                        <input required type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
                     </div>
 
                     <!-- MESSAGE INPUT -->
-                    <label for="comment" class="form-label">Message:</label>
-                    <textarea class="form-control mb-4" id="comment" rows="8"></textarea>
+                    <label for="comment" class="form-label"><strong>Message:</strong></label>
+                    <textarea required class="form-control mb-4" id="comment" rows="8"></textarea>
 
                     <!-- SUBMIT -->
                     <div class="input-group mb-4">
