@@ -123,11 +123,11 @@
 
                 <div class="container m-auto row d-flex align-items-center g-3">
 
-                <img src="Images/home-casa.png" title="Casa (Ages 3–5)" data-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-                <img src="Images/home-primary.png" title="Primary Grade School (Ages 6–8)" data-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-                <img src="Images/home-intermed.png" title= "Intermediate Grade School (Ages 9–12)" data-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-                <img src="Images/home-jhs.png" title="Junior High School (Ages 13–16)" data-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-                <img src="Images/home-shs.png" title="Senior High School (Ages 17–18)" data-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
+                <img src="Images/home-casa.png" title="Casa (Ages 3–5)" data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
+                <img src="Images/home-primary.png" title="Primary Grade School (Ages 6–8)" data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
+                <img src="Images/home-intermed.png" title= "Intermediate Grade School (Ages 9–12)" data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
+                <img src="Images/home-jhs.png" title="Junior High School (Ages 13–16)" data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
+                <img src="Images/home-shs.png" title="Senior High School (Ages 17–18)" data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
 
                 </div>
 
@@ -145,9 +145,14 @@
                     nurturing environment for learning, creativity, and development.
                 </p>
 
-
+                
             </div>
         </div>
 
+        <script> // For initializing the tooltip stuff
+            $(function () {
+                $('[data-toggle=tooltip]').tooltip();
+            });
+        </script>
     </body>
 </html>
