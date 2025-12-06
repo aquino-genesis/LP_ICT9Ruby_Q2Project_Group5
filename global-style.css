@@ -4,20 +4,21 @@ body {
 
 /* Small devices */
 @media (min-width: 576px) {
-  html { font-size: 0.7rem; }
+  html { font-size: 0.9rem; }
 }
 
 /* Medium devices */
 @media (min-width: 768px) {
-  html { font-size: 0.9rem; }
+  html { font-size: 1.1rem; }
 }
 
 /* Large devices */
 @media (min-width: 992px) {
-  html { font-size: 1.1rem; }
+  html { font-size: 1.3rem; }
 }
 
 .text-indent-sm { text-indent: 1.5rem; }
 .text-indent { text-indent: 3rem; }
 .text-indent-lg { text-indent: 5rem; }
+
 
