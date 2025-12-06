@@ -88,74 +88,76 @@
 		</div>
 
         <!-- Enrollment Form -->
-        <form class="container-fluid form-group">
-            <h5 class="text-left fw-bold">Student Information</h5>
+        <div class="container m-auto">
+            <form class="container-fluid form-group">
+                <h5 class="text-left fw-bold">Student Information</h5>
 
-            <!-- NAME INPUT -->
-            <label class="form-label">Full Name</label>
+                <!-- NAME INPUT -->
+                <label class="form-label">Full Name</label>
 
-            <div class="input-group mb-4">
-                <input type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="John"></input>
-                <input type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Doe"></input>
-            </div>
+                <div class="input-group mb-4">
+                    <input type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="John"></input>
+                    <input type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Doe"></input>
+                </div>
 
-            <div class="input-group mb-4">
-                <label for="date" class="col-4 form-label">Birth Date</label>
-                <label for="gender" class="col-4 form-label">Gender</label>
-                <label for="grade" class="col-4 form-label">Grade</label>
+                <div class="input-group mb-4">
+                    <label for="date" class="col-4 form-label">Birth Date</label>
+                    <label for="gender" class="col-4 form-label">Gender</label>
+                    <label for="grade" class="col-4 form-label">Grade</label>
 
-                <!-- BDAY INPUT -->
-                <input type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
+                    <!-- BDAY INPUT -->
+                    <input type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
+
+                    <!-- CAMPUS INPUT -->
+                    <select class="form-select" name="gender" id="gender">
+                        <option selected disabled>Select...</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+
+                    <select class="form-select" id="grade">
+                        <option selected disabled>Select...</option>
+                        <option value="Gr7">Grade 7</option>
+                        <option value="Gr8">Grade 8</option>
+                        <option value="Gr7">Grade 9</option>
+                        <option value="Gr7">Grade 10</option>
+                        <option value="Gr8">Grade 11</option>
+                        <option value="Gr7">Grade 12</option>
+                    </select>
+                </div>
 
                 <!-- CAMPUS INPUT -->
-                <select class="form-select" name="gender" id="gender">
+                <label for="campus" class="form-label">Campus</label>
+                <select class="form-select mb-4" id="campus">
                     <option selected disabled>Select...</option>
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
+                    <option value="angeles">Angeles</option>
+                    <option value="greenhills">Greenhills</option>
+                    <option value="fairview">Fairview</option>
+                    <option value="laspinas">Las Pinas</option>
+                    <option value="staana">Sta. Ana</option>
                 </select>
 
-                <select class="form-select" id="grade">
-                    <option selected disabled>Select...</option>
-                    <option value="Gr7">Grade 7</option>
-                    <option value="Gr8">Grade 8</option>
-                    <option value="Gr7">Grade 9</option>
-                    <option value="Gr7">Grade 10</option>
-                    <option value="Gr8">Grade 11</option>
-                    <option value="Gr7">Grade 12</option>
-                </select>
-            </div>
+                <h5 class="text-left fw-bold">Contact Information</h5>
 
-            <!-- CAMPUS INPUT -->
-            <label for="campus" class="form-label">Campus</label>
-            <select class="form-select mb-4" id="campus">
-                <option selected disabled>Select...</option>
-                <option value="angeles">Angeles</option>
-                <option value="greenhills">Greenhills</option>
-                <option value="fairview">Fairview</option>
-                <option value="laspinas">Las Pinas</option>
-                <option value="staana">Sta. Ana</option>
-            </select>
+                <!-- EMAIL INPUT -->
+                <label for="email" class="form-label">Email</label>
+                <div class="input-group mb-4">
+                    <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
+                </div>
 
-            <h5 class="text-left fw-bold">Contact Information</h5>
+                <!-- NUMBER INPUT -->
+                <label for="phone" class="form-label">Phone Number</label>
+                <div class="input-group mb-4">
+                    <input type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
+                </div>
 
-            <!-- EMAIL INPUT -->
-            <label for="email" class="form-label">Email</label>
-            <div class="input-group mb-4">
-                <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
-            </div>
-
-            <!-- NUMBER INPUT -->
-            <label for="phone" class="form-label">Phone Number</label>
-            <div class="input-group mb-4">
-                <input type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
-            </div>
-
-            <!-- SUBMIT -->
-            <div class="input-group mb-4">
-                    <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg"></input>
-            </div>
-        </form>
+                <!-- SUBMIT -->
+                <div class="input-group mb-4">
+                        <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg"></input>
+                </div>
+            </form>
+        </div>
 
         <!-- FOOTER -->
         <div class="container m-auto">
