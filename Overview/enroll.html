@@ -96,8 +96,8 @@
                 <label class="form-label">Full Name</label>
 
                 <div class="input-group mb-4">
-                    <input type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="John"></input>
-                    <input type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Doe"></input>
+                    <input required type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="John"></input>
+                    <input required type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Doe"></input>
                 </div>
 
                 <div class="input-group mb-4">
@@ -106,17 +106,17 @@
                     <label for="grade" class="col-4 form-label">Grade</label>
 
                     <!-- BDAY INPUT -->
-                    <input type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
+                    <input required type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
 
-                    <!-- CAMPUS INPUT -->
-                    <select class="form-select" name="gender" id="gender">
+                    <!-- GENDER INPUT -->
+                    <select required class="form-select" name="gender" id="gender">
                         <option selected disabled>Select...</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                         <option value="Other">Other</option>
                     </select>
 
-                    <select class="form-select" id="grade">
+                    <select required class="form-select" id="grade">
                         <option selected disabled>Select...</option>
                         <option value="Gr7">Grade 7</option>
                         <option value="Gr8">Grade 8</option>
@@ -129,7 +129,7 @@
 
                 <!-- CAMPUS INPUT -->
                 <label for="campus" class="form-label">Campus</label>
-                <select class="form-select mb-4" id="campus">
+                <select required class="form-select mb-4" id="campus">
                     <option selected disabled>Select...</option>
                     <option value="angeles">Angeles</option>
                     <option value="greenhills">Greenhills</option>
@@ -143,13 +143,13 @@
                 <!-- EMAIL INPUT -->
                 <label for="email" class="form-label">Email</label>
                 <div class="input-group mb-4">
-                    <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
+                    <input required type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
                 </div>
 
                 <!-- NUMBER INPUT -->
                 <label for="phone" class="form-label">Phone Number</label>
                 <div class="input-group mb-4">
-                    <input type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
+                    <input required type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
                 </div>
 
                 <!-- SUBMIT -->
