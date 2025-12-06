@@ -70,55 +70,89 @@
 		<div class="container-fluid overflow-hidden my-5">
 			<div class="container m-auto d-flex flex-column align-items-center text-center">
 
-				<h1 class="text-primary fw-bold">Advancing the Montessori Way</h1>
+				<h1 class="text-primary fw-bold">Enrollment Form</h1>
+                <h3 class="text-secondary fw-bold">Join our next S.Y. today!</h3>
 				<br>
 
 				<p>
-					At OBMC, we are deeply committed to the philosophy and educational method
-					developed by Dr. Maria Montessori.
+					At O.B. Montessori Center, we are ready to help you with a smooth admission 
+                    and enrollment experience for your child.
 				</p>
 				<br>
 
 				<p>
-					The Montessori education emphasizes independence, freedom with responsibility,
-					and respect for the child’s intellectual, spiritual, and social development.
-					Children learn through exploration, manipulation, order, repetition, abstraction,
-					and communication.
+					Fill out the form below to join our community today.
 				</p>
 				<br>
 
-				<div class="container m-auto row d-flex align-items-center g-3">
-					<img src="../Images/home-maria-01.png" title="Maria Montessori working with Romanian children (01)." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-					<img src="../Images/home-maria-02.png" title="Maria Montessori working with Romanian children (02)." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-					<img src="../Images/home-maria-03.png" title="Maria Montessori working with Romanian children (03)." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-					<img src="../Images/home-student-01.png" title="Junior High School student in laboratory peering through microscope." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-					<img src="../Images/home-student-02.png" title="Primary student completing the Montessorian 'Puzzle Map' material." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-					<img src="../Images/home-student-03.png" title="Senior High School students collaborating." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-4 col-md-4 col-12">
-				</div>
-                <br>
+				<form class="container-fluid form-group">
+                    <p class="text-left pt-3 fs-3">Student Information</p>
 
-                <hr class="my-4 w-50 border-2 rounded">
-                <br>
+                    <!-- NAME INPUT -->
+                    <label class="form-label">Full Name</label>
 
-                <h1 class="text-primary fw-bold">Founders and History</h1>
-                <br>
+                    <div class="input-group mb-4">
+                        <input type="text" name="fname" id="fname" class="container form-control input-lg" placeholder="John"></input>
+                        <input type="text" name="lname" id="lname" class="container form-control input-lg" placeholder="Doe"></input>
+                    </div>
 
-                <p>
-                    Learn about the rich history of O.B. Montessori Center and the visionaries who founded it.
-                </p>
-                <br>
+                    <div class="input-group mb-4">
+                        <label for="date" class="col-4 form-label">Birth Date</label>
+                        <label for="gender" class="col-4 form-label">Gender</label>
+                        <label for="grade" class="col-4 form-label">Grade</label>
 
-                <p>
-                    Since 1966, our school has been dedicated to championing the rights of the child 
-                    by providing an exceptional Montessori education in the Philippines.
-                </p>
-                <br>
+                        <!-- BDAY INPUT -->
+                        <input type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
 
-                <div class="container m-auto row d-flex align-items-center g-3">
-					<img src="../Images/home-arellano.png" title="Architect Oscar Arellano, the original designer of O.B. Montessori Center." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-5 col-md-5 col-12">
-                    <div class="col-lg-2 col-md-2"></div>
-					<img src="../Images/home-soliven.png" title="Dr. Preciosa S. Soliven, the founder and Chief Executive Officer of OBMC." data-bs-toggle="tooltip" class="img-thumbnail shadow col-lg-5 col-md-5 col-12">
-				</div>
+                        <!-- CAMPUS INPUT -->
+                        <select class="form-select" name="gender" id="gender">
+                            <option selected disabled>Select...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <select class="form-select" id="grade">
+                            <option selected disabled>Select...</option>
+                            <option value="Gr7">Grade 7</option>
+                            <option value="Gr8">Grade 8</option>
+                            <option value="Gr7">Grade 9</option>
+                            <option value="Gr7">Grade 10</option>
+                            <option value="Gr8">Grade 11</option>
+                            <option value="Gr7">Grade 12</option>
+                        </select>
+                    </div>
+
+                    <!-- CAMPUS INPUT -->
+                    <label for="campus" class="form-label">Campus</label>
+                    <select class="form-select mb-4" id="campus">
+                        <option selected disabled>Select...</option>
+                        <option value="angeles">Angeles</option>
+                        <option value="greenhills">Greenhills</option>
+                        <option value="fairview">Fairview</option>
+                        <option value="laspinas">Las Pinas</option>
+                        <option value="staana">Sta. Ana</option>
+                    </select>
+
+                    <p class="text-left fs-3">Contact Information</p>
+
+                    <!-- EMAIL INPUT -->
+                    <label for="email" class="form-label">Email</label>
+                    <div class="input-group mb-4">
+                        <input type="email" name="email" id="email" class="container-fluid form-control input-lg" placeholder="student@example.com"></input>
+                    </div>
+
+                    <!-- NUMBER INPUT -->
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <div class="input-group mb-4">
+                        <input type="text" name="phone" id="phone" class="container-fluid form-control input-lg" placeholder="0123-456-7890"></input>
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <div class="input-group mb-4">
+                         <input type="submit" name="submit" id="submit" class="btn btn-primary mx-auto d-block container-fluid form-control input-lg"></input>
+                    </div>
+                </form>
 
 			</div>
 		</div>
