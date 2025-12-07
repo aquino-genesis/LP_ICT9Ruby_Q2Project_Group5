@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,11 +49,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="">
-                                Theme
-                                <i class="text-primary bi bi-moon-fill px-2 fs-5"></i>
-                            </a>
-                        </li>
+							<a class="nav-link active" id="themeToggle">
+								Theme 
+								<i class="text-primary bi bi-moon-fill px-2 fs-5"></i>
+							</a>
+						</li>
 
                         <li class="nav-item">
                             <a class="nav-link text-success d-flex align-items-center" href="https://aquino-genesis.github.io/LP_ICT9Ruby_Q2Project_Group5/Platform/login.html">
@@ -171,6 +171,27 @@
 		</div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+
+        <script> // Theme toggler
+			const htmlElement = document.documentElement;
+			const themeToggle = document.getElementById('themeToggle');
+			const icon = themeToggle.querySelector('i');
+
+			themeToggle.addEventListener('click', () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+				const next = current === 'dark' ? 'light' : 'dark';
+
+				htmlElement.setAttribute('data-bs-theme', next);
+
+				if (next === 'dark') {
+					icon.classList.remove('bi-moon-fill');
+					icon.classList.add('bi-sun-fill');
+				} else {
+					icon.classList.remove('bi-sun-fill');
+					icon.classList.add('bi-moon-fill');
+				}
+			});
+		</script>
 
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
