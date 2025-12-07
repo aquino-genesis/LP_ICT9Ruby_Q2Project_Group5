@@ -108,6 +108,24 @@
                     <!-- BDAY INPUT -->
                     <input required type="date" name="bday" id="bday" class="container-fluid form-control input-lg"></input>
 
+					<script> // DYNAMIC DATE LIMITER
+
+						// Getting current date and bday input
+						const dateInput = document.getElementById('bday');
+						const today = new Date();
+
+						// Format the date to YYYY-MM-DD
+						const year = today.getFullYear();
+						const month = (today.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-indexed, so add 1
+						const day = today.getDate().toString().padStart(2, '0');
+
+						const formattedDate = `${year}-${month}-${day}`;
+
+						// Setting the 'min' attribute of the date input
+						dateInput.setAttribute('min', formattedDate);
+						
+					</script>
+
                     <!-- GENDER INPUT -->
                     <select required class="form-select" name="gender" id="gender">
                         <option value selected disabled>Select...</option>
