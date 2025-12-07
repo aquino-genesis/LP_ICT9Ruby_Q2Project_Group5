@@ -151,6 +151,46 @@
 			});
 
 		</script>
+
+        <script> // Theme toggler
+			const htmlElement = document.documentElement;
+			const themeToggle = document.getElementById('themeToggle');
+			const icon = themeToggle.querySelector('i');
+
+			// set correct icon when the page loads
+			document.addEventListener("DOMContentLoaded", () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+				if (current === 'dark') {
+					icon.classList.remove('bi-moon-fill');
+					icon.classList.add('bi-sun-fill');
+				}
+			});
+
+			themeToggle.addEventListener('click', () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+				const next = current === 'dark' ? 'light' : 'dark';
+
+				htmlElement.setAttribute('data-bs-theme', next);
+				setCookie("theme", next);
+
+				if (next === 'dark') {
+					icon.classList.remove('bi-moon-fill');
+					icon.classList.add('bi-sun-fill');
+				} else {
+					icon.classList.remove('bi-sun-fill');
+					icon.classList.add('bi-moon-fill');
+				}
+			});
+		</script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+				tooltipTriggerList.forEach(el => {
+					new bootstrap.Tooltip(el);
+				});
+			});
+		</script>
     </body>
 </html>
 
