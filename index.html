@@ -191,13 +191,10 @@
 				const themeToggle = document.getElementById('themeToggle');
 
 				themeToggle.addEventListener('click', () => {
-					if (htmlElement.getAttribute('data-bs-theme') === 'dark') {
-						htmlElement.setAttribute('data-bs-theme', 'light');
-					} else {
-						htmlElement.setAttribute('data-bs-theme', 'light');
-					}
+					const current = htmlElement.getAttribute('data-bs-theme');
+					htmlElement.setAttribute('data-bs-theme', current === 'dark' ? 'light' : 'dark');
 				});
-				
+
 		</script>
 	</body>
 </html>
