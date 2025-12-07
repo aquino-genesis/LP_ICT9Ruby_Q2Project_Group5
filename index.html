@@ -288,16 +288,54 @@
 			});
 		</script>
 
-		<script> // Theme toggler
+		<script> // Cookie handler
+
+			// read cookie helper
+			function getCookie(name) {
+				const value = `; ${document.cookie}`;
+				const parts = value.split(`; ${name}=`);
+				if (parts.length === 2) return parts.pop().split(';').shift();
+				return null;
+			}
+
+			// write cookie helper
+			function setCookie(name, value, days = 365) {
+				const d = new Date();
+				d.setTime(d.getTime() + (days*24*60*60*1000));
+				document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
+			}
+
+			// apply saved theme on load
+			document.addEventListener("DOMContentLoaded", () => {
+				const saved = getCookie("theme");
+				if (saved) {
+					document.documentElement.setAttribute("data-bs-theme", saved);
+				}
+			});
+			
+		</script>
+
+
+		<script>
 			const htmlElement = document.documentElement;
 			const themeToggle = document.getElementById('themeToggle');
 			const icon = themeToggle.querySelector('i');
+
+			// set correct icon when the page loads
+			document.addEventListener("DOMContentLoaded", () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+				if (current === 'dark') {
+					icon.classList.remove('bi-moon-fill');
+					icon.classList.add('bi-sun-fill');
+				}
+			});
 
 			themeToggle.addEventListener('click', () => {
 				const current = htmlElement.getAttribute('data-bs-theme');
 				const next = current === 'dark' ? 'light' : 'dark';
 
 				htmlElement.setAttribute('data-bs-theme', next);
+				setCookie("theme", next);
 
 				if (next === 'dark') {
 					icon.classList.remove('bi-moon-fill');
@@ -308,6 +346,7 @@
 				}
 			});
 		</script>
+
 
 	</body>
 </html>
