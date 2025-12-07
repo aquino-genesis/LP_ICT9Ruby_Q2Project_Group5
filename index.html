@@ -305,18 +305,20 @@
 				document.cookie = `${name}=${value}; expires=${d.toUTCString()}; path=/`;
 			}
 
-			// apply saved theme on load
+			// on load
 			document.addEventListener("DOMContentLoaded", () => {
+
+				// apply saved theme
 				const saved = getCookie("theme");
 				if (saved) {
 					document.documentElement.setAttribute("data-bs-theme", saved);
 				}
 			});
-			
+
 		</script>
 
 
-		<script>
+		<script> // Theme toggler
 			const htmlElement = document.documentElement;
 			const themeToggle = document.getElementById('themeToggle');
 			const icon = themeToggle.querySelector('i');
