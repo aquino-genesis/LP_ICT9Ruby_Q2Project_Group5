@@ -186,15 +186,25 @@
 		</script>
 
 		<script> // Theme toggler
+			const htmlElement = document.documentElement;
+			const themeToggle = document.getElementById('themeToggle');
+			const icon = themeToggle.querySelector('i');
 
-			    const htmlElement = document.documentElement;
-				const themeToggle = document.getElementById('themeToggle');
+			themeToggle.addEventListener('click', () => {
+				const current = htmlElement.getAttribute('data-bs-theme');
+				const next = current === 'dark' ? 'light' : 'dark';
 
-				themeToggle.addEventListener('click', () => {
-					const current = htmlElement.getAttribute('data-bs-theme');
-					htmlElement.setAttribute('data-bs-theme', current === 'dark' ? 'light' : 'dark');
-				});
+				htmlElement.setAttribute('data-bs-theme', next);
 
+				if (next === 'dark') {
+					icon.classList.remove('bi-moon-fill');
+					icon.classList.add('bi-sun-fill');
+				} else {
+					icon.classList.remove('bi-sun-fill');
+					icon.classList.add('bi-moon-fill');
+				}
+			});
 		</script>
+
 	</body>
 </html>
