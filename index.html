@@ -365,23 +365,25 @@
 				}
 			});
 
-			themeToggle.addEventListener('click', () => {
-				const current = htmlElement.getAttribute('data-bs-theme');
-				const next = current === 'dark' ? 'light' : 'dark';
+			if (themeToggle != null) {
+				themeToggle.addEventListener('click', () => {
+					const current = htmlElement.getAttribute('data-bs-theme');
+					const next = current === 'dark' ? 'light' : 'dark';
 
-				htmlElement.setAttribute('data-bs-theme', next);
-				setCookie("theme", next);
+					htmlElement.setAttribute('data-bs-theme', next);
+					setCookie("theme", next);
 
-				if (icon != null) {
-					if (next === 'dark') {
-						icon.classList.remove('bi-moon-fill');
-						icon.classList.add('bi-sun-fill');
-					} else {
-						icon.classList.remove('bi-sun-fill');
-						icon.classList.add('bi-moon-fill');
+					if (icon != null) {
+						if (next === 'dark') {
+							icon.classList.remove('bi-moon-fill');
+							icon.classList.add('bi-sun-fill');
+						} else {
+							icon.classList.remove('bi-sun-fill');
+							icon.classList.add('bi-moon-fill');
+						}
 					}
-				}
-			});
+				});
+			}
 		</script>
 
 
