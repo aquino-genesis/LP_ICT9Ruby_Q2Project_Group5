@@ -213,13 +213,17 @@
 			const loginButton = document.getElementById('login');
 			const logoutButton = document.getElementById('logout');
 
-			loginButton.addEventListener('click', () => {
-				setCookie("loggedIn", true);
-			});
+			if (loginButton) {
+				loginButton.addEventListener('click', () => {
+					setCookie("loggedIn", "true");
+				});
+			}
 
-			logoutButton.addEventListener('click', () => {
-				setCookie("loggedIn", false);
-			});
+			if (logoutButton) {
+				logoutButton.addEventListener('click', () => {
+					setCookie("loggedIn", "false");
+				});
+			}
 		</script>
 
         <script> // Theme toggler
