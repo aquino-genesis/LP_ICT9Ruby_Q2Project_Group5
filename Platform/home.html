@@ -198,30 +198,28 @@
 
 		</script>
 
-		<script> // Login Handler
-			// on load
+		<script>
+			// Login Handler
 			document.addEventListener("DOMContentLoaded", () => {
-				const loggedIn = getCookie("loggedIn") || false;
+				const loggedIn = getCookie("loggedIn");
 
-				console.log(loggedIn);
-
-				if (loggedIn == true) {
+				if (loggedIn === "true") {
 					window.location.replace("https://aquino-genesis.github.io/LP_ICT9Ruby_Q2Project_Group5/Platform/home.html");
 				}
 			});
-			
-			const loginButton = document.getElementById('login');
-			const logoutButton = document.getElementById('logout');
+
+			const loginButton = document.getElementById("login");
+			const logoutButton = document.getElementById("logout");
 
 			if (loginButton) {
-				loginButton.addEventListener('click', () => {
-					setCookie("loggedIn", true);
+				loginButton.addEventListener("click", () => {
+					setCookie("loggedIn", "true");
 				});
 			}
 
 			if (logoutButton) {
-				logoutButton.addEventListener('click', () => {
-					setCookie("loggedIn", false);
+				logoutButton.addEventListener("click", () => {
+					setCookie("loggedIn", "false");
 				});
 			}
 		</script>
