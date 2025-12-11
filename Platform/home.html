@@ -73,8 +73,8 @@
 							</a>
 						</li>
 
-                        <li class="nav-item">
-                            <a id="logout" class="nav-link text-danger d-flex align-items-center" href="../Platform/login.html">
+                        <li onclick='setCookie("loggedIn", "false");' class="nav-item">
+                            <a class="nav-link text-danger d-flex align-items-center" href="../Platform/login.html">
                                 Log Out 
                                 <i class="bi bi-door-open-fill ms-1 px-2"></i>
                             </a>
@@ -93,7 +93,7 @@
                 <div class="btn container"><i class="bi bi-house-fill fs-3"><br class="d-none d-md-block"> Home</i></div>
                 <div class="btn container"><i class="bi bi-journals fs-3"><br class="d-none d-md-block"> Feeds</i></div>
                 <div class="btn container"><i class="bi bi-calendar fs-3"><br class="d-none d-md-block"> Schedule</i></div>
-                <div class="btn container"><a id="logout" href="../Platform/login.html" class="text-body-emphasis text-decoration-none"><i class="bi bi-door-open-fill fs-3"><br class="d-none d-md-block"> Log Out</i></a></div>
+                <div class="btn container"><a onclick='setCookie("loggedIn", "false");' href="../Platform/login.html" class="text-body-emphasis text-decoration-none"><i class="bi bi-door-open-fill fs-3"><br class="d-none d-md-block"> Log Out</i></a></div>
             </div>
 
             <!-- Class Feed -->
@@ -206,21 +206,6 @@
 					window.location.replace("https://aquino-genesis.github.io/LP_ICT9Ruby_Q2Project_Group5/Platform/home.html");
 				}
 			});
-
-			const loginButton = document.getElementById("login");
-			const logoutButton = document.getElementById("logout");
-
-			if (loginButton) {
-				loginButton.addEventListener("click", () => {
-					setCookie("loggedIn", "true");
-				});
-			}
-
-			if (logoutButton) {
-				logoutButton.addEventListener("click", () => {
-					setCookie("loggedIn", "false");
-				});
-			}
 		</script>
 
         <script> // Theme toggler

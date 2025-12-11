@@ -143,17 +143,10 @@
 			});
 
 			const loginButton = document.getElementById("login");
-			const logoutButton = document.getElementById("logout");
 
 			if (loginButton) {
 				loginButton.addEventListener("click", () => {
 					setCookie("loggedIn", "true");
-				});
-			}
-
-			if (logoutButton) {
-				logoutButton.addEventListener("click", () => {
-					setCookie("loggedIn", "false");
 				});
 			}
 		</script>
