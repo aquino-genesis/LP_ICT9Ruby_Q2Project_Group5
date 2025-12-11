@@ -533,9 +533,12 @@
 			// set correct icon when the page loads
 			document.addEventListener("DOMContentLoaded", () => {
 				const current = htmlElement.getAttribute('data-bs-theme');
-				if (current === 'dark') {
-					icon.classList.remove('bi-moon-fill');
-					icon.classList.add('bi-sun-fill');
+
+				if (icon != null) {
+					if (current === 'dark') {
+						icon.classList.remove('bi-moon-fill');
+						icon.classList.add('bi-sun-fill');
+					}
 				}
 			});
 
@@ -546,12 +549,14 @@
 				htmlElement.setAttribute('data-bs-theme', next);
 				setCookie("theme", next);
 
-				if (next === 'dark') {
-					icon.classList.remove('bi-moon-fill');
-					icon.classList.add('bi-sun-fill');
-				} else {
-					icon.classList.remove('bi-sun-fill');
-					icon.classList.add('bi-moon-fill');
+				if (icon != null) {
+					if (next === 'dark') {
+						icon.classList.remove('bi-moon-fill');
+						icon.classList.add('bi-sun-fill');
+					} else {
+						icon.classList.remove('bi-sun-fill');
+						icon.classList.add('bi-moon-fill');
+					}
 				}
 			});
 		</script>
