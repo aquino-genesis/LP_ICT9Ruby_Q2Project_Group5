@@ -75,13 +75,13 @@
                     <!-- ID NUMBER INPUT -->
                         <!-- <label for="id">ID Number:</label> <br> -->
                     <div class="input-group my-4">
-                        <input type="text" name="id" id="id" class="container-fluid form-control input-lg" placeholder="ID Number"></input>
+                        <input type="text" required name="id" id="id" class="container-fluid form-control input-lg" placeholder="ID Number"></input>
                     </div>
 
                     <!-- PASSWORD INPUT -->
                         <!-- <label for="pass">Password:</label> <br> -->
                     <div class="input-group my-4">
-                        <input type="password" id="pass" class="form-control" placeholder="Password">
+                        <input type="password" required id="pass" class="form-control" placeholder="Password">
                         <button class="btn btn-outline-secondary" type="button" onclick="showPass()">
                             <i class="bi bi-eye-slash" id="eye-con"></i>
                         </button>
@@ -133,8 +133,7 @@
 
 		</script>
 
-		<script>
-			// Login Handler
+		<script> // Login Handler
 			document.addEventListener("DOMContentLoaded", () => {
 				const loggedIn = getCookie("loggedIn");
 
