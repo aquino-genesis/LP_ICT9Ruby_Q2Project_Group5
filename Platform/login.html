@@ -165,6 +165,11 @@
 		<script> // Theme toggler
 			const htmlElement = document.documentElement;
 			const themeToggle = document.getElementById('themeToggle');
+
+			if (!(themeToggle)) {
+				return;
+			}
+
 			const icon = themeToggle.querySelector('i');
 
 			// set correct icon when the page loads
