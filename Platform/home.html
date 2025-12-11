@@ -203,8 +203,6 @@
 			document.addEventListener("DOMContentLoaded", () => {
 				const loggedIn = getCookie("loggedIn") || false;
 
-				console.log(toString(loggedIn));
-
 				if (loggedIn == true) {
 					window.location.replace("https://aquino-genesis.github.io/LP_ICT9Ruby_Q2Project_Group5/Platform/home.html");
 				}
@@ -215,13 +213,13 @@
 
 			if (loginButton) {
 				loginButton.addEventListener('click', () => {
-					setCookie("loggedIn", "true");
+					setCookie("loggedIn", true);
 				});
 			}
 
 			if (logoutButton) {
 				logoutButton.addEventListener('click', () => {
-					setCookie("loggedIn", "false");
+					setCookie("loggedIn", false);
 				});
 			}
 		</script>

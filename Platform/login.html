@@ -148,13 +148,13 @@
 
 			if (loginButton) {
 				loginButton.addEventListener('click', () => {
-					setCookie("loggedIn", "true");
+					setCookie("loggedIn", true);
 				});
 			}
 
 			if (logoutButton) {
 				logoutButton.addEventListener('click', () => {
-					setCookie("loggedIn", "false");
+					setCookie("loggedIn", false);
 				});
 			}
 		</script>
