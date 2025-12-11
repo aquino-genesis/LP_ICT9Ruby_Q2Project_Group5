@@ -229,12 +229,11 @@
         <script> // Theme toggler
 			const htmlElement = document.documentElement;
 			const themeToggle = document.getElementById('themeToggle');
+			var icon = null;
 
-			if (!(themeToggle)) {
-				return;
+			if (themeToggle) {
+				icon = themeToggle.querySelector('i');	
 			}
-
-			const icon = themeToggle.querySelector('i');
 
 			// set correct icon when the page loads
 			document.addEventListener("DOMContentLoaded", () => {
