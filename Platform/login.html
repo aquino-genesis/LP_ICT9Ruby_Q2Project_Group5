@@ -133,6 +133,28 @@
 
 		</script>
 
+		<script> // Login Handler
+			// on load
+			document.addEventListener("DOMContentLoaded", () => {
+				const loggedIn = getCookie("loggedIn") || false
+
+				if (loggedIn == true) {
+					window.location.replace("https://aquino-genesis.github.io/LP_ICT9Ruby_Q2Project_Group5/Platform/home.html")
+				}
+			});
+			
+			const loginButton = document.getElementById('login');
+			const logoutButton = document.getElementById('logout')
+
+			loginButton.addEventListener('click', () => {
+				setCookie("loggedIn", true)
+			});
+
+			logoutButton.addEventListener('click', () => {
+				setCookie("loggedIn", false)
+			});
+		</script>
+
 
 		<script> // Theme toggler
 			const htmlElement = document.documentElement;
